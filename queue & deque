@@ -1,0 +1,131 @@
+#include<bits/stdc++.h>
+#define int long long
+#define endl '\n'
+
+typedef long long ll;
+
+using namespace std;
+
+int32_t main()
+{
+
+    /// queue  -- > FIFO - >  first in first out
+
+  //  queue < int> q;
+
+    //q.push(10);
+    //q.push(12);
+
+    //q.push(5);
+    //q.push(13);
+
+   // cout << q.front() << endl;  /// 10  queue er shoru r element output dei
+  //  q.pop();/// 1st element delete kore dei
+
+
+    //cout << q.front() << endl;
+
+
+  /// queue er sob gula  man print korte hole
+
+/*
+  while(!q.empty())
+  {
+      cout << q.front() << endl;
+      q.pop();
+  }
+*/
+
+/// queue r size print korte chaile
+
+//cout << (int ) q.size() << endl;
+
+/// famous  problems using queue  --- >    Bracket sequence problem
+
+
+ ///     (((())))(())()()              this sequence is balanced or not  -- balanced if  ()
+
+
+
+
+ /*
+
+ string s;
+ cin >> s;
+
+
+ queue <char> q;
+
+
+ for(auto i : s)
+ {
+     if(i == '(') q.push('(');
+
+     else if(q.empty())
+     {
+         cout << "Not Balanced\n";
+         return 0;
+
+     }
+
+     else  q.pop();
+
+ }
+
+ if(q.empty()) cout << "Balanced\n";
+ else cout << "Not Balanced\n";
+
+
+
+*/
+
+
+///  deque
+
+int n;
+cin >> n;
+
+deque <int > dq;
+
+for(int i = 0; i  < n;i++)
+{
+
+    int num;
+    cin >> num ;
+
+    dq.push_back(num);
+
+}
+
+for(auto i : dq) cout << i << " ";   /// 1 2 3 4  5
+
+
+/// dq.push_front()   dile  -- > reverse e print hob e -->    5 4  3 2  1
+
+/// ekane stl er function gula o use kora jai -- > sort , reverse
+
+
+
+/// two pointer er problems gula kk-- > easily dq diye solve kora jai
+
+
+dq.pop_front();
+
+dq.pop_back();
+
+for(int i = 0; i < n - 2; i++) cout << dq[i] << " ";
+
+
+
+
+
+
+
+
+    return 0;
+}
+
+
+
+
+
